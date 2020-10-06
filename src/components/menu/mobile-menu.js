@@ -38,7 +38,7 @@ const MenuItem = styled(Link)(({ theme }) => `
   text-transform: uppercase;
   transition: background-color 250ms, color 250ms;
   &:hover, &:focus {
-    background-color: ${ theme.color.grey.main };
+    background-color: ${ theme.color.black  };
   }
   &.active {
     color: ${ theme.color.primary.main }
