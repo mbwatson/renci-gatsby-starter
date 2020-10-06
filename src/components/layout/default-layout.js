@@ -4,6 +4,8 @@ import { Menu, MobileMenu } from '../menu'
 import { useWindowWidth } from '@react-hook/window-size'
 import './style.css'
 import { menuItems } from '../../menu'
+import Img from 'gatsby-image'
+import { useBrand } from '../../hooks'
 
 const MOBILE_THRESHHOLD = 792
 
@@ -48,11 +50,14 @@ const Footer = styled.footer(({ theme }) => `
 
 export const DefaultLayout = ({ children }) => {
   const windowWidth = useWindowWidth()
-  
+  const { dark: logo } = useBrand()
+
   return (
     <Wrapper>
       <Header>
-        <Brand>Site Name</Brand>
+        <Brand>
+          <Img fixed={ logo } style={{ width: '82.5px', height: '54px', margin: 0 }} /> <br/>
+        </Brand>
         { windowWidth <= MOBILE_THRESHHOLD  ? <MobileMenu items={ menuItems } /> : <Menu items={ menuItems } /> }
       </Header>
       <Main>
