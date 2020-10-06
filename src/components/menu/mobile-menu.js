@@ -37,8 +37,11 @@ const MenuItem = styled(Link)(({ theme }) => `
   padding: 1rem 2rem;
   text-transform: uppercase;
   transition: background-color 250ms;
-  &:hover {
+  &:hover, &:focus {
     background-color: ${ theme.color.grey.main };
+  }
+  &.active {
+    color: ${ theme.color.primary.main }
   }
 `)
 
@@ -65,7 +68,7 @@ export const MobileMenu = ({ items }) => {
       <Toggler onClick={ handleToggleMenu } active={ open } />
       <Drawer translation={ open ? '0' : '-100%' }>
         <Nav>
-          { items.map(item => <MenuItem key={ item.text } to={ item.path } onClick={ handleCloseMenu }>{ item.text }</MenuItem>) }
+          { items.map(item => <MenuItem key={ item.text } to={ item.path } onClick={ handleCloseMenu } activeClassName="active">{ item.text }</MenuItem>) }
         </Nav>
       </Drawer>
     </Fragment>

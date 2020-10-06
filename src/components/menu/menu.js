@@ -20,15 +20,18 @@ const MenuItem = styled(Link)(({ theme }) => `
   padding: ${ theme.spacing.md };
   text-transform: uppercase;
   transition: background-color 250ms;
-  &:hover {
+  &:hover, &:focus {
     background-color: ${ theme.color.grey.dark };
+  }
+  &.active {
+    color: ${ theme.color.primary.main }
   }
 `)
 
 export const Menu = ({ items }) => {
   return (
     <Wrapper>
-      { items.map(item => <MenuItem to={ item.path } key={ item.text } >{ item.text }</MenuItem>) }
+      { items.map(item => <MenuItem to={ item.path } key={ item.text } activeClassName="active">{ item.text }</MenuItem>) }
     </Wrapper>
   )
 }
