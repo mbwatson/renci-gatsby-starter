@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 const Wrapper = styled.nav`
   display: flex;
@@ -24,12 +25,17 @@ const MenuItem = styled(Link)(({ theme }) => `
   }
 `)
 
-export const Menu = () => {
+export const Menu = ({ items }) => {
   return (
     <Wrapper>
-      <MenuItem to="/">Home</MenuItem>
-      <MenuItem to="/about">About</MenuItem>
-      <MenuItem to="/contact">Contact</MenuItem>
+      { items.map(item => <MenuItem to={ item.path } key={ item.text } >{ item.text }</MenuItem>) }
     </Wrapper>
   )
+}
+
+Menu.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
+     text: PropTypes.string.isRequired,
+     path: PropTypes.string.isRequired,
+   })).isRequired,
 }

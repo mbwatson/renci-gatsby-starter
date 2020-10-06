@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 import { Menu, MobileMenu } from '../menu'
 import { useWindowWidth } from '@react-hook/window-size'
 import './style.css'
+import { menuItems } from '../../menu'
 
 const MOBILE_THRESHHOLD = 792
 
@@ -48,11 +48,12 @@ const Footer = styled.footer(({ theme }) => `
 
 export const DefaultLayout = ({ children }) => {
   const windowWidth = useWindowWidth()
+  
   return (
     <Wrapper>
       <Header>
         <Brand>Site Name</Brand>
-        { windowWidth <= MOBILE_THRESHHOLD  ? <MobileMenu /> : <Menu /> }
+        { windowWidth <= MOBILE_THRESHHOLD  ? <MobileMenu items={ menuItems } /> : <Menu items={ menuItems } /> }
       </Header>
       <Main>
         { children }

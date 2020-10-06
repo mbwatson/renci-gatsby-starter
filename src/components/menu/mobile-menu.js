@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import styled, { useTheme } from 'styled-components'
-import { Icon } from '../icons'
+import styled from 'styled-components'
 import { Toggler } from './toggler'
 
 const DRAWER_WIDTH = 400
@@ -42,9 +42,8 @@ const MenuItem = styled(Link)(({ theme }) => `
   }
 `)
 
-export const MobileMenu = () => {
+export const MobileMenu = ({ items }) => {
   const [open, setOpen] = useState(false)
-  const theme = useTheme()
   
   const handleToggleMenu = () => setOpen(!open)
   const handleCloseMenu = () => setOpen(false)
@@ -66,11 +65,16 @@ export const MobileMenu = () => {
       <Toggler onClick={ handleToggleMenu } active={ open } />
       <Drawer translation={ open ? '0' : '-100%' }>
         <Nav>
-          <MenuItem onClick={ handleCloseMenu } to="/">Home</MenuItem>
-          <MenuItem onClick={ handleCloseMenu } to="/about">About</MenuItem>
-          <MenuItem onClick={ handleCloseMenu } to="/contact">Contact</MenuItem>
+          { items.map(item => <MenuItem key={ item.text } to={ item.path } onClick={ handleCloseMenu }>{ item.text }</MenuItem>) }
         </Nav>
       </Drawer>
     </Fragment>
   )
+}
+
+MobileMenu.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
+     text: PropTypes.string.isRequired,
+     path: PropTypes.string.isRequired,
+   })).isRequired,
 }
