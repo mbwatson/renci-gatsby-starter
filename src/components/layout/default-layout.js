@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { useWindowWidth } from '@react-hook/window-size'
@@ -23,6 +24,14 @@ const Brand = styled(Link)(({ compact }) => `
   transition: padding 250ms;
   padding: ${ compact ? '0.25rem 2rem' : '2rem' };
 `)
+
+Brand.propTypes = {
+  compact: PropTypes.oneOf([0, 1]).isRequired,
+}
+
+Brand.defaultProps = {
+  compact: 0,
+}
 
 const Header = styled.header(({ theme }) => `
   background-color: ${ theme.color.white };
@@ -63,7 +72,7 @@ export const DefaultLayout = ({ children }) => {
   return (
     <Wrapper>
       <Header>
-        <Brand to="/" compact={ scrollPosition > 150 }>
+        <Brand to="/" compact={ scrollPosition > 150 ? 1 : 0 }>
           <Img fixed={ logo } style={{ width: '82.5px', height: '54px', margin: 0 }} /> <br/>
         </Brand>
         { windowWidth <= MOBILE_THRESHHOLD  ? <MobileMenu items={ menuItems } /> : <Menu items={ menuItems } /> }
