@@ -19,7 +19,7 @@ const MenuItem = styled(Link)(({ theme }) => `
   height: 100%;
   padding: ${ theme.spacing.md };
   text-transform: uppercase;
-  transition: background-color 250ms;
+  transition: background-color 250ms, color 250ms;
   &:hover, &:focus {
     background-color: ${ theme.color.grey.dark };
   }
