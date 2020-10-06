@@ -7,8 +7,8 @@ const IndexPage = () => {
   return (
     <Fragment>
       <SEO title="Home" />
-      <Hero>
-        hero hero hero hero hero hero 
+      <Hero backgroundImage="https://picsum.photos/1200/300">
+        Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore magna aliqua.
       </Hero>
       <Container>
         <h1>Home</h1>
