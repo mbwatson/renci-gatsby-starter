@@ -52,7 +52,7 @@ export const Hero = ({ backgroundImage, children }) => {
   const scrollPosition = useScrollPosition()
   return (
     <Wrapper>
-      <Background image={ backgroundImage } yShift={ scrollPosition / 2 } />
+      <Background image={ backgroundImage } yShift={ scrollPosition / 3 } />
       <Contents>
         { children }
       </Contents>
