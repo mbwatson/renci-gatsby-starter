@@ -1,10 +1,12 @@
 import React, { Fragment } from 'react'
 import { SEO } from '../components/seo'
+import { useTheme } from 'styled-components'
 import { Hero } from '../components/hero'
 import { Container } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
 import { List } from '../components/list'
+import { LoadingSpinner } from '../components/loading-spinner'
 
 const sampleLinks = [
   { text: 'one', path: '#' },
@@ -14,6 +16,7 @@ const sampleLinks = [
 ]
 
 export default () => {
+  const theme = useTheme()
   return (
     <Fragment>
       <SEO title="About" />
@@ -68,6 +71,8 @@ export default () => {
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
           cillum dolore eu fugiat nulla pariatur.
         </Paragraph>
+
+        <LoadingSpinner text="Loading..." textPlacement="bottom" color={ theme.color.primary.main } />
       </Container>
 
     </Fragment>
