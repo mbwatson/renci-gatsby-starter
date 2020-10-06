@@ -5,7 +5,7 @@ import { useWindowWidth } from '@react-hook/window-size'
 import './style.css'
 import { menuItems } from '../../menu'
 import Img from 'gatsby-image'
-import { useBrand } from '../../hooks'
+import { useBrand, useScrollPosition } from '../../hooks'
 
 const MOBILE_THRESHHOLD = 792
 
@@ -15,11 +15,12 @@ const Wrapper = styled.div`
   min-height: 100vh;
 `
 
-const Brand = styled.div`
+const Brand = styled.div(({ compact }) => `
   font-weight: bold;
   text-transform: uppercase;
-  padding: 2rem;
-`
+  transition: padding 250ms;
+  padding: ${ compact ? '0.25rem 2rem' : '2rem' };
+`)
 
 const Header = styled.header(({ theme }) => `
   background-color: ${ theme.color.black };
@@ -50,12 +51,13 @@ const Footer = styled.footer(({ theme }) => `
 
 export const DefaultLayout = ({ children }) => {
   const windowWidth = useWindowWidth()
+  const scrollPosition = useScrollPosition()
   const { dark: logo } = useBrand()
 
   return (
     <Wrapper>
       <Header>
-        <Brand>
+        <Brand compact={ scrollPosition > 150 }>
           <Img fixed={ logo } style={{ width: '82.5px', height: '54px', margin: 0 }} /> <br/>
         </Brand>
         { windowWidth <= MOBILE_THRESHHOLD  ? <MobileMenu items={ menuItems } /> : <Menu items={ menuItems } /> }
