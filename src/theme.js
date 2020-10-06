@@ -1,13 +1,13 @@
 export const theme = {
     color: {
         primary: {
-            light: '#30dbe7',
-            main: '#00abc7',
-            dark: '#007ba7',
+            light: '#32daf6',
+            main: '#02aac6',
+            dark: '#028aa6',
         },
         extended: {
             moss: '#5e9b8b',
-            teal: '#00abc7',
+            ocean: '#58a3d2',
             sherbet: '#ffa872',
         },
         black: '#181818',
@@ -23,7 +23,7 @@ export const theme = {
         danger: '#c16a5d',
     },
     border: {
-        radius: '4px',
+        radius: '8px',
         width: '1px',
     },
     spacing: {

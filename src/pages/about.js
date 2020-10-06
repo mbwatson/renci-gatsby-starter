@@ -7,7 +7,7 @@ import { List } from '../components/list'
 
 const listItems = ['one', 'two', 'three', 'four']
 
-const AboutPage = () => {
+export default () => {
   return (
     <Fragment>
       <SEO title="About" />
@@ -55,5 +55,3 @@ const AboutPage = () => {
     </Fragment>
   )
 }
-
-export default AboutPage
