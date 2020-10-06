@@ -18,8 +18,5 @@ export const Container = styled.div`
   max-width: ${ CONTAINER_WIDTH }px;
   margin: 0 auto;
   padding: 2rem;
-  @media (min-width: ${ CONTAINER_WIDTH }px) {
-    padding: 2rem 1rem;
-  }
-    animation: ${ unfade } 500ms ease-out forwards;
+  animation: ${ unfade } 500ms ease-out forwards;
 `
