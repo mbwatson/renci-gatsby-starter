@@ -6,7 +6,12 @@ import { Title, Heading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
 import { List } from '../components/list'
 
-const listItems = ['one', 'two', 'three', 'four']
+const sampleLinks = [
+  { text: 'one', path: '#' },
+  { text: 'two', path: '#' },
+  { text: 'three', path: 'http://example.com/' },
+  { text: 'four', path: '#' },
+]
 
 export default () => {
   return (
@@ -51,7 +56,7 @@ export default () => {
 
         <List
           bullets="disc"
-          items={ listItems.map(item => <a key={ item } href="/">{ item }</a>) }
+          items={ sampleLinks.map(item => <a key={ item.text } href={ item.path }>{ item.text }</a>) }
         />
 
         <Heading>Last Heading</Heading>
