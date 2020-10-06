@@ -1,12 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Menu, MobileMenu } from '../menu'
-import { useWindowWidth } from '@react-hook/window-size'
-import './style.css'
-import { menuItems } from '../../menu'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
+import { useWindowWidth } from '@react-hook/window-size'
 import { useBrand, useScrollPosition } from '../../hooks'
+import { Link } from '../link'
+import { Menu, MobileMenu } from '../menu'
+import { menuItems } from '../../menu'
 import backgroundLines from '../../images/background-lines.png'
+import './style.css'
 
 const MOBILE_THRESHHOLD = 792
 
@@ -16,7 +17,7 @@ const Wrapper = styled.div`
   min-height: 100vh;
 `
 
-const Brand = styled.div(({ compact }) => `
+const Brand = styled(Link)(({ compact }) => `
   font-weight: bold;
   text-transform: uppercase;
   transition: padding 250ms;
@@ -62,7 +63,7 @@ export const DefaultLayout = ({ children }) => {
   return (
     <Wrapper>
       <Header>
-        <Brand compact={ scrollPosition > 150 }>
+        <Brand to="/" compact={ scrollPosition > 150 }>
           <Img fixed={ logo } style={{ width: '82.5px', height: '54px', margin: 0 }} /> <br/>
         </Brand>
         { windowWidth <= MOBILE_THRESHHOLD  ? <MobileMenu items={ menuItems } /> : <Menu items={ menuItems } /> }
