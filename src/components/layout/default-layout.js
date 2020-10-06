@@ -8,6 +8,7 @@ import { Link } from '../link'
 import { Menu, MobileMenu } from '../menu'
 import { menuItems } from '../../menu'
 import backgroundLines from '../../images/background-lines.png'
+import { Paragraph } from '../typography'
 import './style.css'
 
 //
@@ -87,7 +88,7 @@ export const DefaultLayout = ({ children }) => {
     <Wrapper>
       <Header>
         <Brand to="/" compact={ scrollPosition > 150 ? 1 : 0 }>
-          <Img fixed={ logo } style={{ width: '82.5px', height: '54px', margin: 0 }} /> <br/>
+          <Img fixed={ logo } style={{ width: '82.5px', height: '54px', margin: 0 }} />
         </Brand>
         { windowWidth <= MOBILE_THRESHHOLD  ? <MobileMenu items={ menuItems } /> : <Menu items={ menuItems } /> }
       </Header>
@@ -95,7 +96,13 @@ export const DefaultLayout = ({ children }) => {
         { children }
       </Main>
       <Footer>
-        &copy; { new Date().getFullYear() } 
+        <Paragraph align="center" width="600px">
+          RENCI (Renaissance Computing Institute) develops and deploys advanced technologies
+          to enable research discoveries and practical innovations.
+          RENCI partners with researchers, government, and industry to engage and solve the problems
+          that affect North Carolina, our nation, and the world.
+        </Paragraph>
+        &copy; RENCI { new Date().getFullYear() }
       </Footer>
     </Wrapper>
   )
