@@ -3,10 +3,12 @@ import { SEO } from '../components/seo'
 import { useTheme } from 'styled-components'
 import { Hero } from '../components/hero'
 import { Container } from '../components/layout'
+import { Container as Grid, Row, Col } from 'react-grid-system'
 import { Title, Heading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
 import { List } from '../components/list'
 import { LoadingSpinner } from '../components/loading-spinner'
+import { Card } from '../components/card'
 
 const sampleLinks = [
   { text: 'one', path: '#' },
@@ -45,6 +47,32 @@ export default () => {
 
         <br />
         <br />
+
+        <Grid fluid>
+          <Row>
+            <Col xs={ 12 } md={ 4 } style={{ margin: '1rem 0' }}>
+              <Card>
+                <Card.Header>Card One Title</Card.Header>
+                <Card.Body>Card One Body</Card.Body>
+                <Card.Footer>Card One Footer</Card.Footer>
+              </Card>
+            </Col>
+            <Col xs={ 12 } md={ 4 } style={{ margin: '1rem 0' }}>
+              <Card>
+                <Card.Header>Card Two Title</Card.Header>
+                <Card.Body>Card Two Body</Card.Body>
+                <Card.Footer>Card Two Footer</Card.Footer>
+              </Card>
+            </Col>
+            <Col xs={ 12 } md={ 4 } style={{ margin: '1rem 0' }}>
+              <Card>
+                <Card.Header>Card Three Title</Card.Header>
+                <Card.Body>Card Three Body</Card.Body>
+                <Card.Footer>Card Three Footer</Card.Footer>
+              </Card>
+            </Col>
+          </Row>
+        </Grid>
 
         <Paragraph>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
