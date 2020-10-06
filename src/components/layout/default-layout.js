@@ -6,6 +6,7 @@ import './style.css'
 import { menuItems } from '../../menu'
 import Img from 'gatsby-image'
 import { useBrand, useScrollPosition } from '../../hooks'
+import backgroundLines from '../../images/background-lines.png'
 
 const MOBILE_THRESHHOLD = 792
 
@@ -39,6 +40,10 @@ const Main = styled.main`
   flex: 1;
   width: 100%;
   z-index: 0;
+  background-image: url(${ backgroundLines });
+  background-size: 1200px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
 `
 
 const Footer = styled.footer(({ theme }) => `
