@@ -23,7 +23,7 @@ export const theme = {
         danger: '#c16a5d',
     },
     border: {
-        radius: '8px',
+        radius: '3px',
         width: '1px',
     },
     spacing: {
