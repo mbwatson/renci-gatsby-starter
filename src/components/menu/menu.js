@@ -11,7 +11,7 @@ const Wrapper = styled.nav`
 `
 
 const MenuItem = styled(Link)(({ theme }) => `
-  color: #eee;
+  color: ${ theme.color.black };
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -21,7 +21,7 @@ const MenuItem = styled(Link)(({ theme }) => `
   text-transform: uppercase;
   transition: background-color 250ms, color 250ms;
   &:hover, &:focus {
-    background-color: ${ theme.color.grey.dark };
+    background-color: ${ theme.color.grey.light };
   }
   &.active {
     color: ${ theme.color.primary.main }

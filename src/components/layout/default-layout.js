@@ -23,8 +23,8 @@ const Brand = styled.div(({ compact }) => `
 `)
 
 const Header = styled.header(({ theme }) => `
-  background-color: ${ theme.color.black };
-  color: ${ theme.color.white };
+  background-color: ${ theme.color.white };
+  color: ${ theme.color.black };
   display: flex;
   flex-direction: row;
   justify-content: space-between;100%
@@ -43,8 +43,8 @@ const Main = styled.main`
 
 const Footer = styled.footer(({ theme }) => `
   padding: 2rem 2rem;
-  background-color: ${ theme.color.black };
-  color: ${ theme.color.white };
+  background-color: ${ theme.color.white };
+  color: ${ theme.color.black };
   text-align: center;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
 `)
@@ -52,7 +52,7 @@ const Footer = styled.footer(({ theme }) => `
 export const DefaultLayout = ({ children }) => {
   const windowWidth = useWindowWidth()
   const scrollPosition = useScrollPosition()
-  const { dark: logo } = useBrand()
+  const { light: logo } = useBrand()
 
   return (
     <Wrapper>
