@@ -10,13 +10,19 @@ import { menuItems } from '../../menu'
 import backgroundLines from '../../images/background-lines.png'
 import './style.css'
 
+//
+
 const MOBILE_THRESHHOLD = 792
+
+//
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 `
+
+//
 
 const Brand = styled(Link)(({ compact }) => `
   font-weight: bold;
@@ -33,6 +39,8 @@ Brand.defaultProps = {
   compact: 0,
 }
 
+//
+
 const Header = styled.header(({ theme }) => `
   background-color: ${ theme.color.white };
   color: ${ theme.color.black };
@@ -46,6 +54,8 @@ const Header = styled.header(({ theme }) => `
   z-index: 1;
 `)
 
+//
+
 const Main = styled.main`
   flex: 1;
   width: 100%;
@@ -56,6 +66,8 @@ const Main = styled.main`
   background-position: 100% 100%;
 `
 
+//
+
 const Footer = styled.footer(({ theme }) => `
   padding: 2rem 2rem;
   background-color: ${ theme.color.white };
@@ -63,6 +75,8 @@ const Footer = styled.footer(({ theme }) => `
   text-align: center;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
 `)
+
+//
 
 export const DefaultLayout = ({ children }) => {
   const windowWidth = useWindowWidth()
