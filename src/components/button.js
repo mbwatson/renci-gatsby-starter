@@ -3,8 +3,15 @@ import styled, { keyframes } from 'styled-components'
 
 const RIPPLE_DURATION = 500 // in milliseconds
 
-export const Wrapper = styled.button(({ theme }) => `
-  background-color: ${ theme.color.primary.main };
+const color = {
+  danger: ['danger'],
+  warning: ['warning'],
+  success: ['success'],
+  info: ['info'],
+}
+
+export const Wrapper = styled.button(({ theme, variant }) => `
+  background-color: ${ variant ? theme.color[variant] : theme.color.primary.main };
   color: ${ theme.color.white };
   padding: ${ theme.spacing.sm } ${ theme.spacing.md };
   border-radius: ${ theme.border.radius };
@@ -16,7 +23,7 @@ export const Wrapper = styled.button(({ theme }) => `
   overflow: hidden;
   outline: 0;
   &:disabled {
-    background-color: ${ theme.color.grey.main };
+    filter: saturate(0.25);
     cursor: default;
   }
   &:not(:disabled):hover {
@@ -53,7 +60,7 @@ const Ripple = styled.span`
   animation: ${ RIPPLE_DURATION }ms ease 1 forwards ${ rippleEffect };
 `
 
-export const Button = ({ children, ...props }) => {
+export const Button = ({ children, variant, ...props }) => {
   const [coords, setCoords] = useState({ x: -1, y: -1 })
   const [isRippling, setIsRippling] = useState(false)
 
@@ -81,10 +88,9 @@ export const Button = ({ children, ...props }) => {
     }, [isRippling])
 
   return (
-    <Wrapper onClick={ handleClick } { ...props }>
+    <Wrapper onClick={ handleClick } variant={ variant } { ...props }>
       { isRippling ? <Ripple style={{ left: coords.x, top: coords.y }} /> : null }
       { children }
     </Wrapper>
   )
-
 }

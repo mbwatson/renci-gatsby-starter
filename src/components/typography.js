@@ -2,10 +2,17 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 export const Title = styled.h2`
+  margin: 1rem 0;
   text-transform: uppercase;
 `
 
 export const Heading = styled.h3`
+  margin: 1rem 0;
+  text-transform: uppercase;
+`
+
+export const Subheading = styled.h4`
+  margin: 1rem 0;
   text-transform: uppercase;
 `
 
