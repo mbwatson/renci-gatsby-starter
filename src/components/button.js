@@ -23,7 +23,7 @@ export const Wrapper = styled.button(({ theme, variant }) => `
     filter: brightness(1.1);
   }
   &:not(:disabled):active, &:not(:disabled):focus {
-    filter: drop-shadow(0 0 4px ${ theme.color.primary.dark }66);
+    filter: drop-shadow(0 0 4px ${ variant ? theme.color[variant] : theme.color.primary.main }cc);
   }
 `)
 
