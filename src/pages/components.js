@@ -35,19 +35,36 @@ export default () => {
 
           <Subheading>Active</Subheading>
 
-          <Button>Primary Button</Button> &nbsp;&nbsp;
-          <Button variant="danger">Danger Button</Button> &nbsp;&nbsp;
-          <Button variant="warning">Warning Button</Button> &nbsp;&nbsp;
-          <Button variant="info">Info Button</Button> &nbsp;&nbsp;
-          <Button variant="success">Success Button</Button> &nbsp;&nbsp;
+          <Button>Primary</Button> &nbsp;&nbsp;
+          <Button variant="danger">Danger</Button> &nbsp;&nbsp;
+          <Button variant="warning">Warning</Button> &nbsp;&nbsp;
+          <Button variant="info">Info</Button> &nbsp;&nbsp;
+          <Button variant="success">Success</Button> &nbsp;&nbsp;
           
           <Subheading>Disabled</Subheading>
 
-          <Button disabled>Primary Button</Button> &nbsp;&nbsp;
-          <Button variant="danger" disabled>Danger Button</Button> &nbsp;&nbsp;
-          <Button variant="warning" disabled>Warning Button</Button> &nbsp;&nbsp;
-          <Button variant="info" disabled>Info Button</Button> &nbsp;&nbsp;
-          <Button variant="success" disabled>Success Button</Button> &nbsp;&nbsp;
+          <Button disabled>Primary</Button> &nbsp;&nbsp;
+          <Button disabled variant="danger">Danger</Button> &nbsp;&nbsp;
+          <Button disabled variant="warning">Warning</Button> &nbsp;&nbsp;
+          <Button disabled variant="info">Info</Button> &nbsp;&nbsp;
+          <Button disabled variant="success">Success</Button> &nbsp;&nbsp;
+
+          <Subheading>Small Active</Subheading>
+
+          <Button small>Primary</Button> &nbsp;&nbsp;
+          <Button small variant="danger">Danger</Button> &nbsp;&nbsp;
+          <Button small variant="warning">Warning</Button> &nbsp;&nbsp;
+          <Button small variant="info">Info</Button> &nbsp;&nbsp;
+          <Button small variant="success">Success</Button> &nbsp;&nbsp;
+          
+          <Subheading>Small Disabled</Subheading>
+
+          <Button small disabled>Primary</Button> &nbsp;&nbsp;
+          <Button small disabled variant="danger">Danger</Button> &nbsp;&nbsp;
+          <Button small disabled variant="warning">Warning</Button> &nbsp;&nbsp;
+          <Button small disabled variant="info">Info</Button> &nbsp;&nbsp;
+          <Button small disabled variant="success">Success</Button> &nbsp;&nbsp;
+          
         </Section>
 
         <br /><br />
