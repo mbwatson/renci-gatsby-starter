@@ -23,7 +23,7 @@ export default () => {
     <Fragment>
       <SEO title="Components" />
 
-      <Hero backgroundImage="https://picsum.photos/1200/301">
+      <Hero backgroundImage="https://picsum.photos/1200/302">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit
       </Hero>
 
