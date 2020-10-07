@@ -18,6 +18,16 @@ const sampleLinks = [
   { text: 'four', path: '#' },
 ]
 
+const IconDemo = ({ icon, text }) => {
+  const theme = useTheme()
+  return (
+    <Fragment>
+      <Icon icon={ icon } size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} />
+      <div>{ text }</div>
+    </Fragment>
+  )
+}
+
 export default () => {
   const theme = useTheme()
   return (
@@ -152,116 +162,84 @@ export default () => {
         <Section>
           <Heading>Icons</Heading>
 
+          <Subheading>Actions</Subheading>
           <Grid fluid>
             <Row>
               <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="backspace" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                backspace
+                <IconDemo icon="backspace" text="backspace" />
               </Col>          
               <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="cancel" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                cancel
+                <IconDemo icon="cancel" text="cancel" />
               </Col>          
               <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="close" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                close
+                <IconDemo icon="close" text="close" />
               </Col>          
               <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="chevronUp" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                chevron up
+                <IconDemo icon="delete" text="delete" />
               </Col>          
               <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="chevronDown" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                chevron down
+                <IconDemo icon="download" text="download" />
               </Col>          
               <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="chevronLeft" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                chevron left
+                <IconDemo icon="hamburger" text="hamburger" />
               </Col>          
               <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="chevronRight" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                chevron right
+                <IconDemo icon="magnifyingGlass" text="magnifying glass" />
+              </Col>          
+            </Row>
+          </Grid>
+
+          <Subheading>Account</Subheading>
+          <Grid fluid>
+            <Row>
+              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="user" text="user" />
               </Col>          
               <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="delete" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                delete
+                <IconDemo icon="userCircle" text="userCircle" />
+              </Col>          
+            </Row>
+          </Grid>
+
+          <Subheading>Chevrons</Subheading>
+          <Grid fluid>
+            <Row>
+              <Col xs={ 6 } sm={ 3 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="chevronUp" text="chevron up" />
+              </Col>          
+              <Col xs={ 6 } sm={ 3 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="chevronDown" text="chevron down" />
+              </Col>          
+              <Col xs={ 6 } sm={ 3 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="chevronLeft" text="chevron left" />
+              </Col>          
+              <Col xs={ 6 } sm={ 3 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="chevronRight" text="chevron right" />
+              </Col>          
+            </Row>
+          </Grid>
+
+          <Subheading>Media</Subheading>
+          <Grid fluid>
+            <Row>
+              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="pause" text="pause" />
               </Col>          
               <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="download" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                download
+                <IconDemo icon="play" text="play" />
               </Col>          
               <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="email" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                email
+                <IconDemo icon="stop" text="stop" />
               </Col>          
+            </Row>
+          </Grid>
+
+          <Subheading>Notification</Subheading>
+          <Grid fluid>
+            <Row>
               <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="facebook" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                facebook
+                <IconDemo icon="warning" text="warning" />
               </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="github" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                github
-              </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="hamburger" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                hamburger
-              </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="instagram" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                instagram
-              </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="link" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                link
-              </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="linkedIn" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                linkedIn
-              </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="magnifyingGlass" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                magnifying glass
-              </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="pause" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                pause
-              </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="play" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                play
-              </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="rss" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                rss
-              </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="slack" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                slack
-              </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="stop" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                stop
-              </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="twitter" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                twitter
-              </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="user" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                user
-              </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="userCircle" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                userCircle
-              </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="warning" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                warning
-              </Col>          
-              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
-                <Icon icon="youtube" size={ 36 } fill={ theme.color.primary.main } style={{ margin: '1rem' }} /><br/>
-                youtube
-              </Col>
             </Row>
           </Grid>
         </Section>
@@ -285,6 +263,42 @@ export default () => {
             </Row>
           </Grid>
         </Section>
+
+          <Subheading>WWW</Subheading>
+          <Grid fluid>
+            <Row>
+              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="email" text="email" />
+              </Col>          
+              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="facebook" text="facebook" />
+              </Col>          
+              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="github" text="github" />
+              </Col>          
+              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="link" text="link" />
+              </Col>          
+              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="instagram" text="instagram" />
+              </Col>          
+              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="linkedIn" text="linkedIn" />
+              </Col>          
+              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="rss" text="rss" />
+              </Col>          
+              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="slack" text="slack" />
+              </Col>          
+              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="twitter" text="twitter" />
+              </Col>          
+              <Col xs={ 4 } sm={ 3 } lg={ 2 } style={{ textAlign: 'center'}}>
+                <IconDemo icon="youtube" text="youtube" />
+              </Col>
+            </Row>
+          </Grid>
 
       </Container>
 
