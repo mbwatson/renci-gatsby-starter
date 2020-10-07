@@ -3,13 +3,6 @@ import styled, { keyframes } from 'styled-components'
 
 const RIPPLE_DURATION = 500 // in milliseconds
 
-const color = {
-  danger: ['danger'],
-  warning: ['warning'],
-  success: ['success'],
-  info: ['info'],
-}
-
 export const Wrapper = styled.button(({ theme, variant }) => `
   background-color: ${ variant ? theme.color[variant] : theme.color.primary.main };
   color: ${ theme.color.white };

@@ -1,17 +1,10 @@
 import React, { Fragment } from 'react'
 import { SEO } from '../components/seo'
-import { useTheme } from 'styled-components'
 import { Hero } from '../components/hero'
 import { Container } from '../components/layout'
-import { Container as Grid, Row, Col } from 'react-grid-system'
 import { Title, Heading, Paragraph } from '../components/typography'
-import { Button } from '../components/button'
-import { List } from '../components/list'
-import { LoadingSpinner } from '../components/loading-spinner'
-import { Card } from '../components/card'
 
 export default () => {
-  const theme = useTheme()
   return (
     <Fragment>
       <SEO title="About" />
