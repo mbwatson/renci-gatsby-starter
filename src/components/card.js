@@ -9,11 +9,12 @@ const Wrapper = styled.div(({ theme }) => `
 const CardHeader = styled.header(({ theme }) => `
   background-color: ${ theme.color.grey.light };
   padding: ${ theme.spacing.small };
+  font-weight: bold;
 `)
 
 const CardBody = styled.div(({ theme }) => `
-  padding: ${ theme.spacing.small };
   background-color: #fff;
+  padding: ${ theme.spacing.small };
 `)
 
 const CardFooter = styled.footer(({ theme }) => `
