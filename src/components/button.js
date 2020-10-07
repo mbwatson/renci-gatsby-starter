@@ -3,18 +3,18 @@ import styled, { keyframes } from 'styled-components'
 
 const RIPPLE_DURATION = 500 // in milliseconds
 
-export const Wrapper = styled.button(({ theme, variant }) => `
+export const Wrapper = styled.button(({ theme, variant, small }) => `
   background-color: ${ variant ? theme.color[variant] : theme.color.primary.main };
   color: ${ theme.color.white };
-  padding: ${ theme.spacing.sm } ${ theme.spacing.md };
+  padding: ${ theme.spacing[small ? 'small' : 'medium'] } ${ theme.spacing[small ? 'medium' : 'large' ] };
   border-radius: ${ theme.border.radius };
   border: 0;
   cursor: pointer;
-  transition: filter 250ms;
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
   outline: 0;
+  transition: filter 250ms;
   &:disabled {
     filter: saturate(0.25);
     cursor: default;
