@@ -7,7 +7,6 @@ export const theme = {
         },
         extended: {
             moss: '#5e9b8b',
-            moss: '#5e9b8b',
             ocean: '#58a3d2',
             sherbet: '#ffa872',
         },
