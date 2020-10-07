@@ -12,7 +12,7 @@ export const Heading = styled.h3(({ center }) => `
   margin: 1rem 0;
   text-transform: uppercase;
   text-align: left;
-  ${ center ? 'text-align: center': undefined }
+  ${ center ? 'text-align: center': undefined };
 `)
 
 export const Subheading = styled.h4(({ center }) => `
