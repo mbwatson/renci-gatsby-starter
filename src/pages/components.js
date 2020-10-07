@@ -133,7 +133,22 @@ export default () => {
 
         <Section>
           <Heading>Loading Indicator</Heading>
-          <LoadingSpinner text="Loading..." textPlacement="bottom" color={ theme.color.primary.main } />
+          <Grid fluid>
+            <Row>
+              <Col xs={ 12 } sm={ 4 }>
+                <Subheading center>Text Placement - Bottom</Subheading>
+                <LoadingSpinner text="Loading..." textPlacement="bottom" color={ theme.color.primary.dark } />
+              </Col>
+              <Col xs={ 12 } sm={ 4 }>
+                <Subheading center>Text Placement - Top</Subheading>
+                <LoadingSpinner text="Fetching data..." textPlacement="top" color={ theme.color.danger } />
+              </Col>
+              <Col xs={ 12 } sm={ 4 }>
+                <Subheading center>No Text</Subheading>
+                <LoadingSpinner color={ theme.color.extended.sherbet } />
+              </Col>
+            </Row>
+          </Grid>
         </Section>
       </Container>
 
