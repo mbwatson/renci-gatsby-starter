@@ -1,20 +1,26 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-export const Title = styled.h2`
+export const Title = styled.h2(({ center }) => `
   margin: 1rem 0;
   text-transform: uppercase;
-`
+  text-align: left;
+  ${ center ? 'text-align: center': undefined }
+`)
 
-export const Heading = styled.h3`
+export const Heading = styled.h3(({ center }) => `
   margin: 1rem 0;
   text-transform: uppercase;
-`
+  text-align: left;
+  ${ center ? 'text-align: center': undefined }
+`)
 
-export const Subheading = styled.h4`
+export const Subheading = styled.h4(({ center }) => `
   margin: 1rem 0;
   text-transform: uppercase;
-`
+  text-align: left;
+  ${ center ? 'text-align: center': undefined }
+`)
 
 export const Paragraph = styled.p(({ align, width, maxWidth }) => `
   text-align: ${ align };
