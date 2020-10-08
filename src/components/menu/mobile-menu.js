@@ -20,6 +20,18 @@ const Drawer = styled.div(({ theme, translation }) => `
   z-index: 9;
 `)
 
+const Overlay = styled.div(({ theme, active }) => `
+  background-color: ${ theme.color.primary.dark };
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  transition: opacity 1000ms;
+  opacity: ${ active ? 0.75 : 0.0 };
+  transform: translateX(${ active ? '0' : '-100%' });
+`)
+
 const Nav = styled.nav`
   display: flex;
   flex-direction: column;
@@ -46,7 +58,8 @@ const MenuItem = styled(Link)(({ theme }) => `
 `)
 
 export const MobileMenu = ({ items }) => {
-  const [open, setOpen] = useState(false)
+  // const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(true)
   
   const handleToggleMenu = () => setOpen(!open)
   const handleCloseMenu = () => setOpen(false)
@@ -65,7 +78,8 @@ export const MobileMenu = ({ items }) => {
   
   return (
     <Fragment>
-      <Toggler onClick={ handleToggleMenu } active={ open } />
+      <Toggler active={ open } onClick={ handleToggleMenu } />
+      <Overlay active={ open } onClick={ handleCloseMenu } />
       <Drawer translation={ open ? '0' : '-100%' }>
         <Nav>
           { items.map(item => <MenuItem key={ item.text } to={ item.path } onClick={ handleCloseMenu } activeClassName="active">{ item.text }</MenuItem>) }
