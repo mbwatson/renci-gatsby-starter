@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { SEO } from '../components/seo'
 import { useTheme } from 'styled-components'
 import { Hero } from '../components/hero'
-import { Container } from '../components/layout'
+import { Container, Preformatted } from '../components/layout'
 import { Container as Grid, Row, Col } from 'react-grid-system'
 import { Title, Heading } from '../components/typography'
 import { Icon } from '../components/icons'
@@ -53,6 +53,15 @@ export default () => {
             </Col>          
           </Row>
         </Grid>
+        <Preformatted>
+{`<Icon icon="backspace" size={ 36 } fill={ theme.color.primary.main } />
+<Icon icon="cancel" size={ 36 } fill={ theme.color.primary.main } />
+<Icon icon="close" size={ 36 } fill={ theme.color.primary.main } />
+<Icon icon="delete" size={ 36 } fill={ theme.color.primary.main } />
+<Icon icon="download" size={ 36 } fill={ theme.color.primary.main } />
+<Icon icon="hamburger" size={ 36 } fill={ theme.color.primary.main } />
+<Icon icon="magnifyingGlass" size={ 36 } fill={ theme.color.primary.main } />`}
+        </Preformatted>
 
         <Heading>Account</Heading>
         <Grid fluid>
@@ -65,6 +74,10 @@ export default () => {
             </Col>          
           </Row>
         </Grid>
+        <Preformatted>
+{`<Icon icon="user" size={ 36 } fill={ theme.color.primary.main } />
+<Icon icon="userCircle" size={ 36 } fill={ theme.color.primary.main } />`}
+        </Preformatted>
 
         <Heading>Chevrons</Heading>
         <Grid fluid>
@@ -83,6 +96,12 @@ export default () => {
             </Col>          
           </Row>
         </Grid>
+        <Preformatted>
+{`<Icon icon="chevronUp" size={ 36 } fill={ theme.color.primary.main } />
+<Icon icon="chevronDown" size={ 36 } fill={ theme.color.primary.main } />
+<Icon icon="chevronLeft" size={ 36 } fill={ theme.color.primary.main } />
+<Icon icon="chevronRight" size={ 36 } fill={ theme.color.primary.main } />`}
+        </Preformatted>
 
         <Heading>Media</Heading>
         <Grid fluid>
@@ -98,6 +117,11 @@ export default () => {
             </Col>          
           </Row>
         </Grid>
+        <Preformatted>
+{`<Icon icon="pause" size={ 36 } fill={ theme.color.primary.main } />
+<Icon icon="play" size={ 36 } fill={ theme.color.primary.main } />
+<Icon icon="stop" size={ 36 } fill={ theme.color.primary.main } />`}
+        </Preformatted>
 
         <Heading>Notification</Heading>
         <Grid fluid>
@@ -107,6 +131,7 @@ export default () => {
             </Col>          
           </Row>
         </Grid>
+        <Preformatted>{`<Icon icon="warning" size={ 36 } fill={ theme.color.primary.main } />`}</Preformatted>
 
       </Container>
 
