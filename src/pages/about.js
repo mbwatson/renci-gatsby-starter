@@ -8,9 +8,7 @@ export default () => {
   return (
     <Fragment>
       <SEO title="About" />
-      <Hero backgroundImage="https://picsum.photos/1200/301">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit
-      </Hero>
+      <Hero backgroundImage="https://picsum.photos/1200/301" />
 
       <Container>
         <Title>About</Title>
