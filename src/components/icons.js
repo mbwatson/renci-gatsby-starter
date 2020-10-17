@@ -37,6 +37,7 @@ const icons = {
           <path d="M8 5v14l11-7z"/>
           <path d="M0 0h24v24H0z" fill="none"/>
         </Fragment>,
+  renciDash: <path d="m0-0.3762 20.14 24.376h3.8604v-4.1967z" />,
   rss: <Fragment>
         <path d="M0 0h24v24H0z" fill="none" />
         <circle cx="6.18" cy="17.82" r="2.18" />
