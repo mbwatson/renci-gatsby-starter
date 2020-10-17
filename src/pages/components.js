@@ -9,7 +9,7 @@ import { Button } from '../components/button'
 import { List } from '../components/list'
 import { LoadingSpinner } from '../components/loading-spinner'
 import { Card } from '../components/card'
-import { Icon } from '../components/icons'
+import { Icon } from '../components/icon'
 
 const sampleLinks = [
   { text: 'one', path: '#' },

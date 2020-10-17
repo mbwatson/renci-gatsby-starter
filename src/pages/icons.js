@@ -5,7 +5,7 @@ import { Hero } from '../components/hero'
 import { Container, Pre } from '../components/layout'
 import { Container as Grid, Row, Col } from 'react-grid-system'
 import { Title, Heading } from '../components/typography'
-import { Icon } from '../components/icons'
+import { Icon } from '../components/icon'
 
 const IconDemo = ({ icon, text }) => {
   const theme = useTheme()
