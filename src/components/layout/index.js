@@ -1,4 +1,4 @@
 export * from './container'
 export * from './default-layout'
-export * from './preformatted'
+export * from './pre'
 export * from './section'

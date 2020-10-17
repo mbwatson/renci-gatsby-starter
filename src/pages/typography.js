@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
-import { Container, Preformatted } from '../components/layout'
+import { Container, Pre } from '../components/layout'
 import { Title, Heading, Subheading, Paragraph } from '../components/typography'
 export default () => {
   return (
@@ -15,15 +15,15 @@ export default () => {
         
         <Heading>Title</Heading>
         <Title>This is a Title</Title>
-        <Preformatted>{`<Title>This is a Title</Title>`}</Preformatted>
+        <Pre>{`<Title>This is a Title</Title>`}</Pre>
         
         <Heading>Heading</Heading>
         <Heading>This is a Heading</Heading>
-        <Preformatted>{`<Heading>This is a Heading</Heading>`}</Preformatted>
+        <Pre>{`<Heading>This is a Heading</Heading>`}</Pre>
         
         <Heading>Subheading</Heading>
         <Subheading>This is a Subheading</Subheading>
-        <Preformatted>{`<Subheading>This is a Subheading</Subheading>`}</Preformatted>
+        <Pre>{`<Subheading>This is a Subheading</Subheading>`}</Pre>
 
         <Heading>Paragraph</Heading>
         <Paragraph>
@@ -34,7 +34,7 @@ export default () => {
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </Paragraph>
-        <Preformatted>
+        <Pre>
 {`<Paragraph>
   This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -43,7 +43,7 @@ export default () => {
   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </Paragraph>`}
-        </Preformatted>
+        </Pre>
 
       </Container>
 

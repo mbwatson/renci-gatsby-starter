@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { SEO } from '../components/seo'
 import { useTheme } from 'styled-components'
 import { Hero } from '../components/hero'
-import { Container, Preformatted } from '../components/layout'
+import { Container, Pre } from '../components/layout'
 import { Title, Heading } from '../components/typography'
 import { LoadingSpinner } from '../components/loading-spinner'
 
@@ -19,15 +19,15 @@ export default () => {
         
         <Heading>Text Placement - Bottom</Heading>
         <LoadingSpinner text="Loading..." textPlacement="bottom" color={ theme.color.primary.dark } />
-        <Preformatted>{`<LoadingSpinner text="Loading..." textPlacement="bottom" color={ theme.color.primary.dark } />`}</Preformatted>
+        <Pre>{`<LoadingSpinner text="Loading..." textPlacement="bottom" color={ theme.color.primary.dark } />`}</Pre>
 
         <Heading>Text Placement - Top</Heading>
         <LoadingSpinner text="Fetching data..." textPlacement="top" color={ theme.color.danger } />
-        <Preformatted>{`<LoadingSpinner text="Fetching data..." textPlacement="top" color={ theme.color.danger } />`}</Preformatted>
+        <Pre>{`<LoadingSpinner text="Fetching data..." textPlacement="top" color={ theme.color.danger } />`}</Pre>
         
         <Heading>No Text</Heading>
         <LoadingSpinner color={ theme.color.extended.sherbet } />
-        <Preformatted>{`<LoadingSpinner color={ theme.color.extended.sherbet } />`}</Preformatted>
+        <Pre>{`<LoadingSpinner color={ theme.color.extended.sherbet } />`}</Pre>
 
       </Container>
 

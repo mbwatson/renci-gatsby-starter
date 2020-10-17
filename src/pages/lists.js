@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
-import { Container, Preformatted } from '../components/layout'
+import { Container, Pre } from '../components/layout'
 import { Title } from '../components/typography'
 import { List } from '../components/list'
 
@@ -26,44 +26,44 @@ export default () => {
           bullets="none"
           items={ sampleLinks.map(item => <a key={ item.text } href={ item.path }>{ item.text }</a>) }
         />
-        <Preformatted>
+        <Pre>
 {`<List
   bullets="none"
   items={ sampleLinks.map(item => <a key={ item.text } href={ item.path }>{ item.text }</a>) }
 />`}
-        </Preformatted>
-        <Preformatted>{`<List items={ sampleLinks.map(item => <a key={ item.text } href={ item.path }>{ item.text }</a>) } />`}</Preformatted>
+        </Pre>
+        <Pre>{`<List items={ sampleLinks.map(item => <a key={ item.text } href={ item.path }>{ item.text }</a>) } />`}</Pre>
         <List
           bullets="disc"
           items={ sampleLinks.map(item => <a key={ item.text } href={ item.path }>{ item.text }</a>) }
         />
-        <Preformatted>
+        <Pre>
 {`<List
   bullets="disc"
   items={ sampleLinks.map(item => <a key={ item.text } href={ item.path }>{ item.text }</a>) }
 />`}
-        </Preformatted>
+        </Pre>
         <List
           bullets="circle"
           items={ sampleLinks.map(item => <a key={ item.text } href={ item.path }>{ item.text }</a>) }
         />
-        <Preformatted>
+        <Pre>
 {`<List
   bullets="circle"
   items={ sampleLinks.map(item => <a key={ item.text } href={ item.path }>{ item.text }</a>) }
 />`}
-        </Preformatted>
+        </Pre>
         <List
           bullets="square"
           items={ sampleLinks.map(item => <a key={ item.text } href={ item.path }>{ item.text }</a>) }
         />
-        <Preformatted>
+        <Pre>
 {`<List
   bullets="square"
   items={ sampleLinks.map(item => <a key={ item.text } href={ item.path }>{ item.text }</a>) }
 />`}
 
-        </Preformatted>
+        </Pre>
 
       </Container>
 
