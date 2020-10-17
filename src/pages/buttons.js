@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react'
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
-import { Container, Pre, Section } from '../components/layout'
+import { Container } from '../components/layout'
 import { Title, Heading } from '../components/typography'
 import { Button } from '../components/button'
+import { Section } from '../components/section'
+import { Pre } from '../components/pre'
 
 export default () => {
   return (

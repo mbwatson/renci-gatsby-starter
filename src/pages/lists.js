@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react'
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
-import { Container, Pre } from '../components/layout'
+import { Container } from '../components/layout'
+import { Pre } from '../components/pre'
 import { Title } from '../components/typography'
 import { List } from '../components/list'
 

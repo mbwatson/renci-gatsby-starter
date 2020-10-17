@@ -2,8 +2,9 @@ import React, { Fragment } from 'react'
 import { SEO } from '../components/seo'
 import { useTheme } from 'styled-components'
 import { Hero } from '../components/hero'
-import { Container, Pre } from '../components/layout'
+import { Container } from '../components/layout'
 import { Title, Heading } from '../components/typography'
+import { Pre } from '../components/pre'
 import { LoadingSpinner } from '../components/loading-spinner'
 
 export default () => {
